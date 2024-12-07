@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heyouthere - Where Ideas Meet Talent</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-primary { background-color: #1D3557; } /* Rich navy blue */
+        .bg-secondary { background-color: #F9F7F7; } /* Clean, bright white */
+        .bg-accent { background-color: #E8C4A2; } /* Warm peach */
+        .text-primary { color: #1D3557; }
+        .text-secondary { color: #F9F7F7; }
+        .text-accent { color: #E8C4A2; }
+        .border-accent { border-color: #E8C4A2; }
+        .hover-bg-primary:hover { background-color: #234168; }
+    </style>
+</head>
+<body class="bg-secondary bg-opacity-30">
+    <!-- Navigation -->
+    <nav class="bg-primary text-secondary">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-serif">Heyouthere</span>
+                    <span class="hidden md:inline-block ml-3 text-sm font-light border-l border-opacity-30 pl-3" style="color: #D4B982; border-color: #D4B982;">Where Ideas Meet Talent</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                    <button onclick="openForm()" class="px-6 py-2 bg-accent bg-opacity-90 text-primary rounded-md hover:bg-opacity-100">Join Waitlist</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-primary text-secondary py-20">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h1 class="text-5xl font-serif mb-6">Turn Your Business Idea Into Reality</h1>
+            <p class="text-xl text-accent mb-8">Connect with vetted professionals, find your co-founders, and access expert guidance in a trusted environment.</p>
+            <button onclick="openForm()" class="bg-accent bg-opacity-90 text-primary px-8 py-3 rounded-md hover:bg-opacity-100">Join the Waitlist</button>
+        </div>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="max-w-6xl mx-auto py-16 px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-serif text-primary mb-4">A Trusted Platform for Innovation</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Every member is carefully vetted. Your ideas are protected with NDAs. Connect with confidence.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-accent border-opacity-20">
+                <h3 class="text-xl font-semibold mb-3 text-primary">Protected Environment</h3>
+                <p class="text-gray-600">All members sign NDAs. Your ideas stay safe while you build your dream team.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-accent border-opacity-20">
+                <h3 class="text-xl font-semibold mb-3 text-primary">Vetted Community</h3>
+                <p class="text-gray-600">Every professional is verified. Find the right talent with confidence.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-accent border-opacity-20">
+                <h3 class="text-xl font-semibold mb-3 text-primary">Expert Support</h3>
+                <p class="text-gray-600">Access specialized consultants and mentors in the startup ecosystem.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="bg-secondary bg-opacity-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-serif text-center mb-16 text-primary">How Heyouthere Works</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-accent border-opacity-20">
+                    <h3 class="text-2xl font-serif mb-6 text-primary">For Founders</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">1.</span>
+                            <span>Create your private project group</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">2.</span>
+                            <span>Define your team needs and requirements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">3.</span>
+                            <span>Find and connect with vetted professionals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">4.</span>
+                            <span>Access expert guidance and resources</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-accent border-opacity-20">
+                    <h3 class="text-2xl font-serif mb-6 text-primary">For Professionals</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">1.</span>
+                            <span>Create your professional profile</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">2.</span>
+                            <span>Get verified by our team</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">3.</span>
+                            <span>Discover exciting projects and opportunities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent font-bold mr-2">4.</span>
+                            <span>Join project groups and collaborate</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="text-3xl font-serif text-center mb-16 text-primary">Community Benefits</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-accent border-opacity-20">
+                <h3 class="text-xl font-semibold mb-3 text-primary">Expert Consultants</h3>
+                <p class="text-gray-600">Access specialized lawyers, accountants, and consultants familiar with startup challenges.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-accent border-opacity-20">
+                <h3 class="text-xl font-semibold mb-3 text-primary">Educational Webinars</h3>
+                <p class="text-gray-600">Learn from industry experts about legal, financial, and marketing aspects of starting up.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-accent border-opacity-20">
+                <h3 class="text-xl font-semibold mb-3 text-primary">Mentoring Program</h3>
+                <p class="text-gray-600">Get guidance from experienced entrepreneurs and industry specialists.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div id="join-waitlist" class="bg-primary text-secondary py-16">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-serif mb-6">Be Part of Switzerland's Next Innovation Hub</h2>
+            <p class="text-xl text-accent mb-4">We're currently building our Swiss chapter of innovators, entrepreneurs, and professionals.</p>
+            <p class="text-lg text-secondary opacity-80 mb-8">Join our exclusive waitlist to be among the first members when we launch. Early members will receive founding member benefits and priority access to our network.</p>
+            <button onclick="openForm()" class="bg-accent bg-opacity-90 text-primary px-8 py-3 rounded-md hover:bg-opacity-100">Join Waitlist</button>
+        </div>
+    </div>
+
+    <footer class="bg-secondary py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-primary">
+            <p>© 2024 Heyouthere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Form -->
+    <div id="formPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full relative">
+            <button onclick="closeForm()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">×</button>
+            <h3 class="text-2xl font-serif mb-6 text-primary">Join Our Waitlist</h3>
+            <iframe src="YOUR_GOOGLE_FORM_EMBED_URL" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+    </div>
+
+    <script>
+    function openForm() {
+        document.getElementById('formPopup').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeForm() {
+        document.getElementById('formPopup').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close popup when clicking outside
+    document.getElementById('formPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeForm();
+        }
+    });
+    </script>
+</body>
+</html>
