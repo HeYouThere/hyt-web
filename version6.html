@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heyouthere - Connect, Create, Grow</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Fraunces', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, #4F3867 0%, #2E5187 100%);
+        }
+        .bg-paper { background-color: #FAF9F6; }
+        .bg-accent { background-color: #FF7F50; }
+        .text-accent { color: #FF7F50; }
+    </style>
+</head>
+<body class="font-body bg-paper">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-4">
+                    <span class="font-display text-2xl tracking-tight">heyouthere</span>
+                    <span class="hidden md:inline-block text-sm text-gray-500 border-l border-gray-200 pl-4">Connect · Create · Grow</span>
+                </div>
+                <div class="flex items-center">
+                    <button onclick="openForm()" class="bg-accent text-white px-6 py-2.5 rounded-full hover:opacity-90 transform transition hover:scale-105">
+                        Join the Community
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient text-white py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="font-display text-5xl md:text-6xl mb-6">Build your dream team, bring ideas to life</h1>
+                <p class="text-xl mb-8 text-gray-100">Connect with vetted professionals, find your co-founders, and access the guidance you need to turn your vision into reality.</p>
+                <button onclick="openForm()" class="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-50 transform transition hover:scale-105">
+                    Start Your Journey
+                </button>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="py-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl mb-3">Protected Environment</h3>
+                    <p class="text-gray-600">Your ideas are valuable. NDA-protected discussions in a secure, vetted community.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl mb-3">Find Your Team</h3>
+                    <p class="text-gray-600">Connect with professionals who share your vision and complement your skills.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl mb-3">Expert Support</h3>
+                    <p class="text-gray-600">Access mentors and specialists who've built successful companies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it Works -->
+    <div class="bg-white py-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-display text-3xl md:text-4xl text-center mb-16">Building Your Team</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="bg-paper p-8 rounded-2xl">
+                    <div class="flex items-start mb-6">
+                        <span class="text-accent font-display text-4xl mr-4">1</span>
+                        <div>
+                            <h3 class="font-display text-xl mb-2">Share Your Vision</h3>
+                            <p class="text-gray-600">Create your private project space and outline your needs and goals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <span class="text-accent font-display text-4xl mr-4">2</span>
+                        <div>
+                            <h3 class="font-display text-xl mb-2">Connect</h3>
+                            <p class="text-gray-600">We'll match you with vetted professionals who align with your vision.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <span class="text-accent font-display text-4xl mr-4">3</span>
+                        <div>
+                            <h3 class="font-display text-xl mb-2">Build Together</h3>
+                            <p class="text-gray-600">Collaborate in a secure environment with expert guidance when needed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-display text-2xl mb-6">Community Benefits</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Vetted professional network</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Legal & business templates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Expert consultation sessions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Educational workshops & webinars</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Waitlist -->
+    <div class="py-24">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-display text-3xl md:text-4xl mb-6">Join Our Swiss Chapter</h2>
+            <p class="text-xl mb-8">Be among the first to join our exclusive community of innovators and entrepreneurs in Switzerland.</p>
+            <button onclick="openForm()" class="bg-accent text-white px-8 py-3 rounded-full hover:opacity-90 transform transition hover:scale-105">
+                Join the Waitlist
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-600">
+            <p>© 2024 Heyouthere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Form -->
+    <div id="formPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full relative">
+            <button onclick="closeForm()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="font-display text-2xl mb-6">Join Our Waitlist</h3>
+            <iframe src="YOUR_GOOGLE_FORM_EMBED_URL" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+    </div>
+
+    <script>
+    function openForm() {
+        document.getElementById('formPopup').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeForm() {
+        document.getElementById('formPopup').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('formPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeForm();
+        }
+    });
+    </script>
+</body>
+</html>
