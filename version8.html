@@ -18,7 +18,7 @@
         .text-accent { color: #EA4E26; }
         .border-accent { border-color: #EA4E26; }
         .giant-number {
-            font-size: 20vw;
+            font-size: clamp(4rem, 20vw, 20vw);
             line-height: 0.8;
             font-family: 'Unbounded', cursive;
         }
@@ -28,57 +28,14 @@
         .unskew-text {
             transform: skew(5deg);
         }
-
-        @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            .hero-content {
-                order: 2;
-            }
-            .hero-image {
-                order: 1;
-                text-align: center;
-            }
-            .giant-number {
-                font-size: 30vw;
-            }
-            .features-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .features-grid > div:before {
-                left: 0;
-                transform: none;
-            }
-            .process-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .community-benefits {
-                padding: 3rem;
-            }
-        }
-
         @media (max-width: 768px) {
-            .features-grid {
-                grid-template-columns: 1fr;
+            .giant-number {
+                right: 0 !important;
+                opacity: 0.1;
+                font-size: clamp(8rem, 30vw, 30vw);
             }
-            .features-grid > div:not(:last-child) {
-                margin-bottom: 3rem;
-            }
-            .features-grid > div:before {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-            .community-benefits {
-                padding: 2rem;
-            }
-            .cta-content {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
+            .process-item {
+                padding-left: 3rem;
             }
         }
     </style>
@@ -86,13 +43,13 @@
 <body class="text-gray-900">
     <!-- Navigation -->
     <nav class="py-6">
-        <div class="max-w-7xl mx-auto px-6 sm:px-4">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <h1 class="font-display text-2xl">heyo<span class="text-accent">ut</span>here</h1>
+                    <h1 class="font-display text-2xl md:text-2xl">heyo<span class="text-accent">ut</span>here</h1>
                 </div>
                 <div>
-                    <button onclick="openForm()" class="bg-gray-900 text-white px-8 py-3 hover:bg-accent transition-colors">
+                    <button onclick="openForm()" class="bg-gray-900 text-white px-4 md:px-8 py-3 text-sm md:text-base hover:bg-accent transition-colors">
                         Join Now
                     </button>
                 </div>
@@ -101,41 +58,41 @@
     </nav>
 
     <!-- Hero -->
-    <div class="relative py-32 sm:py-16">
-        <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="grid grid-cols-2 gap-20 hero-grid sm:grid-cols-1">
-                <div class="hero-content">
-                    <h1 class="font-display text-7xl sm:text-5xl leading-tight mb-8">Create<br>Something<br><span class="text-accent">Great.</span></h1>
-                    <p class="text-xl sm:text-base mb-12 max-w-md">Find the right people. Build the right team. Create something extraordinary together.</p>
-                    <button onclick="openForm()" class="skew-box bg-accent text-white px-10 py-4 hover:bg-gray-900 transition-colors">
+    <div class="relative py-16 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
+                <div>
+                    <h1 class="font-display text-5xl md:text-7xl leading-tight mb-8">Create<br>Something<br><span class="text-accent">Great.</span></h1>
+                    <p class="text-lg md:text-xl mb-12 max-w-md">Find the right people. Build the right team. Create something extraordinary together.</p>
+                    <button onclick="openForm()" class="skew-box bg-accent text-white px-8 md:px-10 py-4 hover:bg-gray-900 transition-colors">
                         <span class="unskew-text block">Start Building →</span>
                     </button>
                 </div>
-                <div class="hero-image relative">
-                    <div class="absolute -right-20 sm:-right-10 top-0 text-gray-100 select-none giant-number">01</div>
+                <div class="relative hidden md:block">
+                    <div class="absolute -right-20 top-0 text-gray-100 select-none giant-number">01</div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Features -->
-    <div class="py-32 sm:py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="grid grid-cols-3 gap-12 features-grid sm:grid-cols-1">
-                <div class="relative">
-                    <div class="absolute -left-6 top-0 w-px h-full bg-gray-200"></div>
+    <div class="py-16 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="relative pl-6 md:pl-0">
+                    <div class="absolute left-0 md:-left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">01 / Security</span>
                     <h3 class="font-display text-xl mb-4">Protected Space</h3>
                     <p class="text-gray-600">Your ideas matter. Connect and collaborate in an NDA-protected environment.</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-6 top-0 w-px h-full bg-gray-200"></div>
+                <div class="relative pl-6 md:pl-0">
+                    <div class="absolute left-0 md:-left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">02 / Network</span>
                     <h3 class="font-display text-xl mb-4">Vetted Talent</h3>
                     <p class="text-gray-600">Connect with verified professionals who complement your vision.</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-6 top-0 w-px h-full bg-gray-200"></div>
+                <div class="relative pl-6 md:pl-0">
+                    <div class="absolute left-0 md:-left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">03 / Support</span>
                     <h3 class="font-display text-xl mb-4">Expert Guidance</h3>
                     <p class="text-gray-600">Access mentors and specialists who've been there before.</p>
@@ -145,40 +102,40 @@
     </div>
 
     <!-- Process -->
-    <div class="py-32 sm:py-16">
-        <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="grid grid-cols-2 gap-20 process-grid sm:grid-cols-1">
+    <div class="py-16 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
                 <div>
                     <span class="text-accent font-display text-sm block mb-4">The Process</span>
-                    <h2 class="font-display text-5xl sm:text-4xl mb-16">How We Build<br>Together</h2>
+                    <h2 class="font-display text-4xl md:text-5xl mb-16">How We Build<br>Together</h2>
                     
-                    <div class="space-y-16 sm:space-y-12">
-                        <div>
+                    <div class="space-y-16">
+                        <div class="process-item">
                             <div class="flex items-baseline gap-4 mb-4">
-                                <span class="font-display text-4xl text-accent">01</span>
-                                <h3 class="font-display text-2xl sm:text-xl">Share Your Vision</h3>
+                                <span class="font-display text-3xl md:text-4xl text-accent">01</span>
+                                <h3 class="font-display text-xl md:text-2xl">Share Your Vision</h3>
                             </div>
-                            <p class="text-gray-600 ml-16 sm:ml-12">Create your private project space and outline your needs and goals.</p>
+                            <p class="text-gray-600 ml-16">Create your private project space and outline your needs and goals.</p>
                         </div>
-                        <div>
+                        <div class="process-item">
                             <div class="flex items-baseline gap-4 mb-4">
-                                <span class="font-display text-4xl text-accent">02</span>
-                                <h3 class="font-display text-2xl sm:text-xl">Find Your Team</h3>
+                                <span class="font-display text-3xl md:text-4xl text-accent">02</span>
+                                <h3 class="font-display text-xl md:text-2xl">Find Your Team</h3>
                             </div>
-                            <p class="text-gray-600 ml-16 sm:ml-12">Connect with vetted professionals who align with your vision.</p>
+                            <p class="text-gray-600 ml-16">Connect with vetted professionals who align with your vision.</p>
                         </div>
-                        <div>
+                        <div class="process-item">
                             <div class="flex items-baseline gap-4 mb-4">
-                                <span class="font-display text-4xl text-accent">03</span>
-                                <h3 class="font-display text-2xl sm:text-xl">Create Together</h3>
+                                <span class="font-display text-3xl md:text-4xl text-accent">03</span>
+                                <h3 class="font-display text-xl md:text-2xl">Create Together</h3>
                             </div>
-                            <p class="text-gray-600 ml-16 sm:ml-12">Collaborate seamlessly with built-in tools and expert guidance.</p>
+                            <p class="text-gray-600 ml-16">Collaborate seamlessly with built-in tools and expert guidance.</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-12 sm:p-6 community-benefits">
+                <div class="bg-white p-8 md:p-12">
                     <span class="text-accent font-display text-sm block mb-8">Community Benefits</span>
-                    <div class="space-y-8 sm:space-y-6">
+                    <div class="space-y-8">
                         <div>
                             <h4 class="font-display text-lg mb-2">Professional Network</h4>
                             <p class="text-gray-600">Access to vetted professionals across industries.</p>
@@ -202,22 +159,22 @@
     </div>
 
     <!-- CTA -->
-    <div class="bg-gray-900 text-white py-32 sm:py-16">
-        <div class="max-w-7xl mx-auto px-6 sm:px-4 cta-content">
-            <h2 class="font-display text-5xl sm:text-4xl mb-8">Join Our Swiss Chapter</h2>
-            <p class="text-xl sm:text-base text-gray-400 mb-12 max-w-2xl mx-auto">Be among the first to join our exclusive community of innovators and entrepreneurs in Switzerland.</p>
-            <button onclick="openForm()" class="skew-box bg-accent px-10 py-4 hover:bg-white hover:text-gray-900 transition-colors">
+    <div class="bg-gray-900 text-white py-16 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl md:text-5xl mb-8">Join Our Swiss Chapter</h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">Be among the first to join our exclusive community of innovators and entrepreneurs in Switzerland.</p>
+            <button onclick="openForm()" class="skew-box bg-accent px-8 md:px-10 py-4 hover:bg-white hover:text-gray-900 transition-colors">
                 <span class="unskew-text block">Join the Waitlist →</span>
             </button>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="py-12 sm:py-8">
-        <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="flex justify-between items-center">
+    <footer class="py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="font-display text-sm">© 2024 Heyouthere</div>
-                <div class="text-sm space-x-8 sm:space-x-4">
+                <div class="text-sm space-x-8">
                     <a href="#" class="hover:text-accent">Privacy</a>
                     <a href="#" class="hover:text-accent">Terms</a>
                 </div>
@@ -227,7 +184,7 @@
 
     <!-- Popup Form -->
     <div id="formPopup" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50">
-        <div class="bg-white p-12 sm:p-6 max-w-md w-full relative">
+        <div class="bg-white p-8 md:p-12 max-w-md w-full relative">
             <button onclick="closeForm()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
