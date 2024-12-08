@@ -29,9 +29,10 @@
             transform: skew(5deg);
         }
 
-        @media (max-width: 768px) {
-            .grid-cols-2 {
+        @media (max-width: 1024px) {
+            .hero-grid {
                 grid-template-columns: 1fr;
+                gap: 3rem;
             }
             .hero-content {
                 order: 2;
@@ -44,6 +45,22 @@
                 font-size: 30vw;
             }
             .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .features-grid > div:before {
+                left: 0;
+                transform: none;
+            }
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .community-benefits {
+                padding: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
             .features-grid > div:not(:last-child) {
@@ -55,6 +72,9 @@
             }
             .process-grid {
                 grid-template-columns: 1fr;
+            }
+            .community-benefits {
+                padding: 2rem;
             }
             .cta-content {
                 padding-left: 1.5rem;
@@ -69,11 +89,11 @@
         <div class="max-w-7xl mx-auto px-6 sm:px-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <h1 class="font-display text-2xl">he<span class="text-accent">you</span>there</h1>
+                    <h1 class="font-display text-2xl">heyo<span class="text-accent">ut</span>here</h1>
                 </div>
                 <div>
-                    <button onclick="openForm()" class="skew-box bg-accent text-white px-10 py-4 hover:bg-gray-900 transition-colors">
-                        <span class="unskew-text block">Apply →</span>
+                    <button onclick="openForm()" class="bg-gray-900 text-white px-8 py-3 hover:bg-accent transition-colors">
+                        Join Now
                     </button>
                 </div>
             </div>
@@ -83,13 +103,13 @@
     <!-- Hero -->
     <div class="relative py-32 sm:py-16">
         <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="grid grid-cols-2 gap-20 sm:grid-cols-1 sm:gap-12">
+            <div class="grid grid-cols-2 gap-20 hero-grid sm:grid-cols-1">
                 <div class="hero-content">
                     <h1 class="font-display text-7xl sm:text-5xl leading-tight mb-8">Create<br>Something<br><span class="text-accent">Great.</span></h1>
                     <p class="text-xl sm:text-base mb-12 max-w-md">Find the right people. Build the right team. Create something extraordinary together.</p>
-                  <!--  <button onclick="openForm()" class="skew-box bg-accent text-white px-10 py-4 hover:bg-gray-900 transition-colors">
+                    <button onclick="openForm()" class="skew-box bg-accent text-white px-10 py-4 hover:bg-gray-900 transition-colors">
                         <span class="unskew-text block">Start Building →</span>
-                    </button> -->
+                    </button>
                 </div>
                 <div class="hero-image relative">
                     <div class="absolute -right-20 sm:-right-10 top-0 text-gray-100 select-none giant-number">01</div>
@@ -101,21 +121,21 @@
     <!-- Features -->
     <div class="py-32 sm:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="grid grid-cols-3 sm:grid-cols-1 gap-12 features-grid">
+            <div class="grid grid-cols-3 gap-12 features-grid sm:grid-cols-1">
                 <div class="relative">
-                    <div class="absolute -left-6 sm:left-1/2 top-0 w-px h-full bg-gray-200"></div>
+                    <div class="absolute -left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">01 / Security</span>
                     <h3 class="font-display text-xl mb-4">Protected Space</h3>
                     <p class="text-gray-600">Your ideas matter. Connect and collaborate in an NDA-protected environment.</p>
                 </div>
                 <div class="relative">
-                    <div class="absolute -left-6 sm:left-1/2 top-0 w-px h-full bg-gray-200"></div>
+                    <div class="absolute -left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">02 / Network</span>
                     <h3 class="font-display text-xl mb-4">Vetted Talent</h3>
                     <p class="text-gray-600">Connect with verified professionals who complement your vision.</p>
                 </div>
                 <div class="relative">
-                    <div class="absolute -left-6 sm:left-1/2 top-0 w-px h-full bg-gray-200"></div>
+                    <div class="absolute -left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">03 / Support</span>
                     <h3 class="font-display text-xl mb-4">Expert Guidance</h3>
                     <p class="text-gray-600">Access mentors and specialists who've been there before.</p>
@@ -127,7 +147,7 @@
     <!-- Process -->
     <div class="py-32 sm:py-16">
         <div class="max-w-7xl mx-auto px-6 sm:px-4">
-            <div class="grid grid-cols-2 sm:grid-cols-1 gap-20 process-grid">
+            <div class="grid grid-cols-2 gap-20 process-grid sm:grid-cols-1">
                 <div>
                     <span class="text-accent font-display text-sm block mb-4">The Process</span>
                     <h2 class="font-display text-5xl sm:text-4xl mb-16">How We Build<br>Together</h2>
@@ -156,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-12 sm:p-6">
+                <div class="bg-white p-12 sm:p-6 community-benefits">
                     <span class="text-accent font-display text-sm block mb-8">Community Benefits</span>
                     <div class="space-y-8 sm:space-y-6">
                         <div>
