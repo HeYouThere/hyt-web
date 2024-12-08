@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heyouthere - Create Something Great</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Unbounded', cursive; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        
+        .bg-accent { background-color: #EA4E26; }
+        .text-accent { color: #EA4E26; }
+        
+        .skew-box {
+            transform: skew(-5deg);
+        }
+        .unskew-text {
+            transform: skew(5deg);
+        }
+        
+        .giant-number {
+            font-size: clamp(4rem, 20vw, 20vw);
+            line-height: 0.8;
+            font-family: 'Unbounded', cursive;
+            opacity: 0.1;
+        }
+        
+        @media (max-width: 768px) {
+            .giant-number {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-body bg-white">
+    <!-- Navigation remains the same -->
+    <nav class="py-6">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <h1 class="font-display text-2xl">he<span class="text-accent">you</span>there</h1>
+                    <span class="hidden md:inline-block text-sm text-gray-500 border-l border-gray-200 pl-4">Connect · Create · Grow</span>
+                </div>
+                <div>
+                    <button onclick="openForm()" class="skew-box bg-accent text-white px-6 py-3 hover:bg-gray-900 transition-colors">
+                        <span class="unskew-text block">Apply to Join</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero remains the same -->
+    <div class="relative py-20 md:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
+                <div>
+                    <h1 class="font-display text-5xl md:text-7xl leading-tight mb-8">Create<br>Something<br><span class="text-accent">Great.</span></h1>
+                    <p class="text-lg md:text-xl mb-12 max-w-md">Building a company is more than just having a great idea. You need the right people, the right guidance, and a support system to turn that idea into reality.</p>
+                </div>
+              <!--  <div class="relative hidden md:block">
+                    <div class="absolute -right-20 top-0 text-gray-200 select-none giant-number">01</div>
+                </div> -->
+                
+                <div class="relative hidden md:block">
+                    <div class="absolute -right-20 top-0 text-gray-100 select-none giant-number">01</div>
+                    <div class="absolute right-0 top-20 w-full max-w-lg">
+                        <svg viewBox="0 0 400 400" class="w-full">
+                            <!-- Bold Minimal Lines -->
+                            <!-- Diagonal Line -->
+                            <line x1="50" y1="50" x2="350" y2="350" 
+                                  stroke="#EA4E26" stroke-width="4" 
+                                  class="opacity-20"/>
+                            
+                            <!-- Horizontal Bold Line -->
+                            <line x1="100" y1="200" x2="350" y2="200" 
+                                  stroke="#1a1a1a" stroke-width="6" 
+                                  class="opacity-15"/>
+                            
+                            <!-- Vertical Accent Line -->
+                            <line x1="250" y1="50" x2="250" y2="300" 
+                                  stroke="#EA4E26" stroke-width="3" 
+                                  class="opacity-20"/>
+                            
+                            <!-- Short Angular Line -->
+                            <line x1="150" y1="300" x2="300" y2="250" 
+                                  stroke="#1a1a1a" stroke-width="4" 
+                                  class="opacity-15"/>
+                                  
+                            <!-- Subtle Corner Element -->
+                            <path d="M 50 150 L 50 100 L 100 100" 
+                                  fill="none" 
+                                  stroke="#EA4E26" 
+                                  stroke-width="3" 
+                                  class="opacity-20"/>
+                        </svg>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Community Intro Section -->
+    <div class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl mb-8">Where Founders and Professionals Build Together</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto">Our community brings together ambitious founders and experienced professionals, creating the perfect environment for innovation and growth. Here's how we can help you succeed:</p>
+        </div>
+    </div>
+
+    <!-- For Founders Section - Enhanced -->
+    <div class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
+                <div>
+                    <span class="text-accent font-display text-xl md:text-2xl block mb-4">For Founders</span>
+                    <h2 class="font-display text-3xl md:text-4xl mb-8">Build Your Dream Team</h2>
+                    <div class="space-y-8">
+                        <p class="text-lg">Finding the right people to build your company is crucial - and often the hardest part. In our community, connect with experienced professionals actively looking to join early-stage ventures as core team members and potential co-founders.</p>
+                        
+                        <div class="space-y-6">
+                            <h3 class="font-display text-xl">Our community brings together:</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Experienced professionals eager to be part of the next big thing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Fellow founders at different stages of their journey</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Industry experts and mentors who can guide you through critical decisions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl">
+                    <h3 class="font-display text-xl mb-6">How It Works</h3>
+                    <div class="space-y-6">
+                        <p>Whether you need to validate your idea, find a technical co-founder, or connect with someone who understands specific industry challenges - our community helps you build meaningful relationships with people who could become integral parts of your company's success story.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <span class="font-display text-2xl text-accent mr-4">01</span>
+                                <div>
+                                    <h4 class="font-display text-lg mb-2">Share Your Vision</h4>
+                                    <p class="text-gray-600">Create your private project space and outline your needs</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-display text-2xl text-accent mr-4">02</span>
+                                <div>
+                                    <h4 class="font-display text-lg mb-2">Connect</h4>
+                                    <p class="text-gray-600">Meet professionals who align with your vision</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-display text-2xl text-accent mr-4">03</span>
+                                <div>
+                                    <h4 class="font-display text-lg mb-2">Build Together</h4>
+                                    <p class="text-gray-600">Form partnerships and start creating</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New Platform Benefits Section -->
+                        <div class="mt-12 border-t pt-8">
+                            <h3 class="font-display text-xl mb-6">Platform Benefits</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-display text-lg mb-2">Protected Space</h4>
+                                        <p class="text-gray-600">Your ideas matter. Connect and collaborate in an NDA-protected environment.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-display text-lg mb-2">Legal Framework</h4>
+                                        <p class="text-gray-600">NDA templates and legal guidance for partnerships.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-display text-lg mb-2">Expert Sessions</h4>
+                                        <p class="text-gray-600">Regular webinars and consultation opportunities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- For Professionals Section - Enhanced header size -->
+  <!--   <div class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
+                <div class="order-2 lg:order-1 bg-gray-50 p-8 md:p-12 rounded-xl">
+                    <h3 class="font-display text-xl mb-6">Why Join2?</h3>
+                    <div class="space-y-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Be a decision-maker from day one</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Choose projects that align with your values</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Build something meaningful with your expertise</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" -->
+
+
+
+<!-- For Professionals Section -->
+<div class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
+            <div class="order-2 lg:order-1 bg-gray-50 p-8 md:p-12 rounded-xl">
+                <h3 class="font-display text-xl mb-6">Why Join?</h3>
+                <div class="space-y-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Be a decision-maker from day one</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Choose projects that align with your values</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Build something meaningful with your expertise</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Become a key stakeholder in tomorrow's success stories</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <span class="text-accent font-display text-xl md:text-2xl block mb-4">For Professionals</span>
+                <h2 class="font-display text-3xl md:text-4xl mb-8">Your Expertise Could Be the Missing Piece</h2>
+                <div class="space-y-8">
+                    <p class="text-lg">Join exciting early-stage ventures where your experience truly matters. Be more than just an employee - become a key stakeholder in tomorrow's success stories.</p>
+                    <p class="text-lg">Find projects that align with your values and utilize your expertise in meaningful ways. Work with passionate founders who value your experience and want you as an integral part of their journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="bg-gray-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="font-display text-4xl md:text-5xl mb-8">Join Our Swiss Chapter</h2>
+        <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">Be among the first to join our exclusive community of innovators and entrepreneurs in Switzerland.</p>
+        <button onclick="openForm()" class="skew-box bg-accent px-8 md:px-10 py-4 hover:bg-white hover:text-gray-900 transition-colors">
+            <span class="unskew-text block">Apply to Join</span>
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-display text-sm">© 2024 Heyouthere</div>
+            <div class="text-sm space-x-8">
+                <a href="#" class="hover:text-accent">Privacy</a>
+                <a href="#" class="hover:text-accent">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Popup Form -->
+<div id="formPopup" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50">
+    <div class="bg-white p-8 md:p-12 max-w-md w-full relative rounded-xl">
+        <button onclick="closeForm()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <span class="text-accent font-display text-sm block mb-4">Join Us</span>
+        <h3 class="font-display text-2xl mb-6">Join Our Waitlist</h3>
+        <iframe src="YOUR_GOOGLE_FORM_EMBED_URL" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+</div>
+
+<script>
+function openForm() {
+    document.getElementById('formPopup').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeForm() {
+    document.getElementById('formPopup').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+document.getElementById('formPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeForm();
+    }
+});
+</script>
+                                  
+</body>
+</html>
