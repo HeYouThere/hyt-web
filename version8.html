@@ -46,11 +46,11 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <h1 class="font-display text-2xl md:text-2xl">heyo<span class="text-accent">ut</span>here</h1>
+                    <h1 class="font-display text-3xl md:text-3xl">he<span class="text-accent">you</span>there!</h1>
                 </div>
                 <div>
-                    <button onclick="openForm()" class="bg-gray-900 text-white px-4 md:px-8 py-3 text-sm md:text-base hover:bg-accent transition-colors">
-                        Join Now
+                    <button onclick="openForm()" class="skew-box bg-accent text-white px-6 md:px-8 py-3 text-sm md:text-base hover:bg-gray-900 transition-colors">
+                        <span class="unskew-text block">Join →</span>
                     </button>
                 </div>
             </div>
@@ -64,34 +64,62 @@
                 <div>
                     <h1 class="font-display text-5xl md:text-7xl leading-tight mb-8">Create<br>Something<br><span class="text-accent">Great.</span></h1>
                     <p class="text-lg md:text-xl mb-12 max-w-md">Find the right people. Build the right team. Create something extraordinary together.</p>
-                    <button onclick="openForm()" class="skew-box bg-accent text-white px-8 md:px-10 py-4 hover:bg-gray-900 transition-colors">
-                        <span class="unskew-text block">Start Building →</span>
-                    </button>
                 </div>
                 <div class="relative hidden md:block">
                     <div class="absolute -right-20 top-0 text-gray-100 select-none giant-number">01</div>
+                    <div class="absolute right-0 top-20 w-full max-w-lg">
+                        <svg viewBox="0 0 400 400" class="w-full">
+                            <!-- Bold Minimal Lines -->
+                            <!-- Diagonal Line -->
+                            <line x1="50" y1="50" x2="350" y2="350" 
+                                  stroke="#EA4E26" stroke-width="4" 
+                                  class="opacity-20"/>
+                            
+                            <!-- Horizontal Bold Line -->
+                            <line x1="100" y1="200" x2="350" y2="200" 
+                                  stroke="#1a1a1a" stroke-width="6" 
+                                  class="opacity-15"/>
+                            
+                            <!-- Vertical Accent Line -->
+                            <line x1="250" y1="50" x2="250" y2="300" 
+                                  stroke="#EA4E26" stroke-width="3" 
+                                  class="opacity-20"/>
+                            
+                            <!-- Short Angular Line -->
+                            <line x1="150" y1="300" x2="300" y2="250" 
+                                  stroke="#1a1a1a" stroke-width="4" 
+                                  class="opacity-15"/>
+                                  
+                            <!-- Subtle Corner Element -->
+                            <path d="M 50 150 L 50 100 L 100 100" 
+                                  fill="none" 
+                                  stroke="#EA4E26" 
+                                  stroke-width="3" 
+                                  class="opacity-20"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Features -->
-    <div class="py-16 md:py-32 bg-white">
+    <div class="py-16 md:py-32 bg-white overflow-x-auto">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="relative pl-6 md:pl-0">
+            <div class="flex flex-nowrap min-w-max md:min-w-0 md:grid md:grid-cols-3 gap-12">
+                <div class="relative pl-6 md:pl-0 w-72 md:w-auto">
                     <div class="absolute left-0 md:-left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">01 / Security</span>
                     <h3 class="font-display text-xl mb-4">Protected Space</h3>
                     <p class="text-gray-600">Your ideas matter. Connect and collaborate in an NDA-protected environment.</p>
                 </div>
-                <div class="relative pl-6 md:pl-0">
+                <div class="relative pl-6 md:pl-0 w-72 md:w-auto">
                     <div class="absolute left-0 md:-left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">02 / Network</span>
                     <h3 class="font-display text-xl mb-4">Vetted Talent</h3>
-                    <p class="text-gray-600">Connect with verified professionals who complement your vision.</p>
+                    <p class="text-gray-600">Connect with verified community members who complement your vision.</p>
                 </div>
-                <div class="relative pl-6 md:pl-0">
+                <div class="relative pl-6 md:pl-0 w-72 md:w-auto">
                     <div class="absolute left-0 md:-left-6 top-0 w-px h-full bg-gray-200"></div>
                     <span class="text-accent font-display text-sm block mb-8">03 / Support</span>
                     <h3 class="font-display text-xl mb-4">Expert Guidance</h3>
@@ -115,14 +143,14 @@
                                 <span class="font-display text-3xl md:text-4xl text-accent">01</span>
                                 <h3 class="font-display text-xl md:text-2xl">Share Your Vision</h3>
                             </div>
-                            <p class="text-gray-600 ml-16">Create your private project space and outline your needs and goals.</p>
+                            <p class="text-gray-600 ml-16">Create and publish your private project space and outline your needs and goals.</p>
                         </div>
                         <div class="process-item">
                             <div class="flex items-baseline gap-4 mb-4">
                                 <span class="font-display text-3xl md:text-4xl text-accent">02</span>
                                 <h3 class="font-display text-xl md:text-2xl">Find Your Team</h3>
                             </div>
-                            <p class="text-gray-600 ml-16">Connect with vetted professionals who align with your vision.</p>
+                            <p class="text-gray-600 ml-16">Find and connect with skilled community members who align with your vision.</p>
                         </div>
                         <div class="process-item">
                             <div class="flex items-baseline gap-4 mb-4">
@@ -138,7 +166,7 @@
                     <div class="space-y-8">
                         <div>
                             <h4 class="font-display text-lg mb-2">Professional Network</h4>
-                            <p class="text-gray-600">Access to vetted professionals across industries.</p>
+                            <p class="text-gray-600">Access to vetted members across industries.</p>
                         </div>
                         <div>
                             <h4 class="font-display text-lg mb-2">Legal Framework</h4>
@@ -146,7 +174,7 @@
                         </div>
                         <div>
                             <h4 class="font-display text-lg mb-2">Expert Sessions</h4>
-                            <p class="text-gray-600">Regular workshops and consultation opportunities.</p>
+                            <p class="text-gray-600">Regular webinars and consultation opportunities.</p>
                         </div>
                         <div>
                             <h4 class="font-display text-lg mb-2">Resource Library</h4>
